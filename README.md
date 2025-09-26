@@ -1,17 +1,60 @@
-# Web Development Intro (HTML, CSS, JS)
+# 🌐 Web Development Training Repository
 
-This repository contains beginner-friendly materials for learning Web Development.  
-It is designed for secondary school students starting with HTML, CSS, and JavaScript.
+Welcome to the **Web Development Repository**!  
+This repo is designed for learners who want to build skills in **HTML, CSS, and JavaScript**. Through structured tutorials and hands-on projects, you’ll gain the knowledge needed to design, style, and program interactive websites.
 
-## 📂 Structure
-- `01_html/` — Introduction to HTML (structure of a web page)
-- `02_css/` — Introduction to CSS (styling web pages)
-- `03_js/` — Introduction to JavaScript (adding interactivity)
+---
 
-## 🚀 How to Use
-1. Open each folder in order.
-2. Read the `lesson_notes.md`.
-3. Run the example files in a web browser (just double-click the `.html` file).
+## 📖 Learning Tracks
 
-## ✉️ Contact
-Created by Babatunde AWOYEMI — babatundeawoyemi91@gmail.com
+### 🟠 HTML – *Structure the Web*
+- Introduction to **HTML elements and attributes**  
+- Working with **headings, paragraphs, lists, links, and images**  
+- Structuring content with **semantic tags** (`<header>`, `<footer>`, `<article>`, etc.)  
+- Forms and inputs for user interaction  
+
+---
+
+### 🔵 CSS – *Style the Web*
+- Applying **colors, fonts, and backgrounds**  
+- CSS selectors, classes, and IDs  
+- Box model, padding, margin, and borders  
+- Page layout with **Flexbox and Grid**  
+- Animations and transitions for modern UI design  
+
+---
+
+### 🟡 JavaScript – *Make the Web Interactive*
+- Introduction to **variables, operators, and data types**  
+- Functions, events, and DOM manipulation  
+- Conditional statements and loops  
+- Form validation and interactive content  
+- Beginner projects like calculators, to-do lists, and games  
+
+---
+
+## 🚀 Learning Outcomes
+By completing the lessons and projects in this repository, learners will be able to:  
+- Build **static and dynamic web pages**.  
+- Apply **responsive design** principles for mobile-friendly sites.  
+- Use **JavaScript** to add interactivity and functionality.  
+- Understand the basics of **frontend web development**.  
+
+---
+
+## 📂 Repository Structure
+- `/html` → Lessons and projects on HTML basics  
+- `/css` → Lessons and projects on CSS styling  
+- `/javascript` → Lessons and projects on JavaScript programming  
+- `/projects` → Combined mini-projects to apply skills  
+
+---
+
+## 👨‍🏫 About the Trainer
+**Babatunde Ayoola Awoyemi**  
+*STEM Educator | Atmospheric Physicist | Web Developer | Researcher*  
+
+📩 Email: `babatundeawoyemi91@gmail.com`  
+🌍 GitHub: [babatundeawo](https://github.com/babatundeawo)
+
+---
