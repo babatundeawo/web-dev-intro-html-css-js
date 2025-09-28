@@ -7,7 +7,7 @@ This repo is designed for learners who want to build skills in **HTML, CSS, and 
 
 ## 📖 Learning Tracks
 
-### 🟠 HTML – *Structure the Web*
+### 🟠 [HTML – *Structure the Web*](https://github.com/babatundeawo/web-dev-intro-html-css-js/tree/main/html)
 - Introduction to **HTML elements and attributes**  
 - Working with **headings, paragraphs, lists, links, and images**  
 - Structuring content with **semantic tags** (`<header>`, `<footer>`, `<article>`, etc.)  
@@ -15,7 +15,7 @@ This repo is designed for learners who want to build skills in **HTML, CSS, and 
 
 ---
 
-### 🔵 CSS – *Style the Web*
+### 🔵 [CSS – *Style the Web*](https://github.com/babatundeawo/web-dev-intro-html-css-js/tree/main/css)
 - Applying **colors, fonts, and backgrounds**  
 - CSS selectors, classes, and IDs  
 - Box model, padding, margin, and borders  
@@ -24,7 +24,7 @@ This repo is designed for learners who want to build skills in **HTML, CSS, and 
 
 ---
 
-### 🟡 JavaScript – *Make the Web Interactive*
+### 🟡 [JavaScript – *Make the Web Interactive*](https://github.com/babatundeawo/web-dev-intro-html-css-js/tree/main/javascript)
 - Introduction to **variables, operators, and data types**  
 - Functions, events, and DOM manipulation  
 - Conditional statements and loops  
@@ -46,7 +46,7 @@ By completing the lessons and projects in this repository, learners will be able
 - `/html` → Lessons and projects on HTML basics  
 - `/css` → Lessons and projects on CSS styling  
 - `/javascript` → Lessons and projects on JavaScript programming  
-- `/projects` → Combined mini-projects to apply skills  
+- [`/projects`](https://github.com/babatundeawo/web-dev-intro-html-css-js/tree/main/projects) → Combined mini-projects to apply skills  
 
 ---
 
