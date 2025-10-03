@@ -6,6 +6,7 @@ Below is a beginner-friendly teaching package based on the provided HTML tutoria
 
 ## Section 1 — Topical Explanations
 
+This section explains the key concepts from the HTML tutorial, using plain language, everyday metaphors, and step-by-step breakdowns of code examples. Each concept is paired with commented code, expected outputs, visual cues, common errors, and validation checks to ensure beginners can follow along confidently.
 
 ### Concept 1: What is HTML?
 
