@@ -1,4 +1,4 @@
-# JavaScript Loops for Beginners (Nigeria-Focused Edition)
+# JavaScript Loops for Beginners
 
 This response follows the **AI Instructional Framework for Teaching JavaScript Beginners (Nigeria-Focused Edition)**, covering the provided lesson note on JavaScript Loops in detail. The content is broken down into three sections: **Explanations**, **Class Exercise**, and **Weekly Project**, using simple, relatable, and Nigerian-themed examples to make learning clear, practical, and exciting.
 
