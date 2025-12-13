@@ -1,230 +1,193 @@
-# Enhanced JavaScript Maps Tutorial for Beginners - Exercise Solutions
+## 💡 Solution Phase: Warehouse Inventory System
 
-Welcome back! In this follow-up to our JavaScript Maps tutorial, we'll dive into complete solutions for the three applied exercises from Section 2. As your instructor, I'll treat this like marking your homework: I'll provide the full, working code for each exercise, then break it down step-by-step with reasoning, just as if I were reviewing your submission. This reinforces the main concepts from Section 1 (like Map creation, methods, WeakMaps for memory efficiency, and groupBy for categorization) while showing how they tie into real-world applications. Remember, the goal isn't just to copy the code—it's to understand *why* it works and how you'd adapt it for jobs in data analysis, IoT, or finance.
+This section provides the complete, step-by-step solutions for the "Warehouse Inventory System" exercise from Phase 2. Every line of code is explained to reinforce the Map concepts we covered.
 
-I'll preserve all the original exercise descriptions (no cuts or skips) and add my instructor feedback, including praise for good approaches, corrections for potential mistakes, and tips for improvement. Each solution uses the "input → process → output" pattern for code lines, highlights common beginner pitfalls, and includes thinking questions to deepen your learning. Let's grade these as if you submitted them: I'll assign a score out of 4 (based on correctness, clarity, creativity, and documentation) and explain why.
+-----
 
-## Section 1: Conceptual Understanding (Quick Review for Context)
+### Exercise: Warehouse Inventory System - Solutions
 
-Before jumping into solutions, let's quickly revisit the key concepts these exercises build on—I'll explain them simply to ensure you're solid. Maps are like organized dictionaries for key-value data, allowing any key type (e.g., objects) and maintaining order, which solves problems like tracking unique items without string conversion bugs in regular objects. Why? In real life, finance apps use Maps to pair transaction IDs (numbers or dates) with amounts for ordered reports. WeakMaps add "weak" references for auto-cleanup via garbage collection (GC), preventing memory leaks in long-running apps like climate monitoring systems where sensors come and go. groupBy (ES2024) categorizes data efficiently, like grouping stock trades by risk level in data analysis tools.
+### **Step 1: Setup**
 
-Common mistake: Forgetting that Maps use strict equality (===) for keys, so new objects won't match existing ones even if they look the same. Fix: Reuse the same object reference. Thinking question: How does order in Maps help in a robotics app logging timed events?
+**Instruction:** Create a Map named `inventoryStock` initialized with three items: `"Cable"` (250 units), `"Screw"` (1000 units), and `"Sensor"` (85 units).
 
-## Section 2: Applied Exercises (Solutions with Instructor Explanations)
-
-Here are the complete solutions. Each starts with the original exercise (preserved fully), followed by the code, then my detailed marking and explanations. I've tested these in a browser console—they work as expected.
-
-### Exercise 1: Basic Fruit Inventory Map (Basics + set/get/size)
-
-**Original (Preserved):**  
-**Objective:** Create and manipulate a Map to track store inventory, practicing creation and access.  
-**Scenario:** You're a store manager (finance tracking) building a simple stock system. Add fruits, update stock, check counts.  
-**Step-by-Step Instructions:**  
-
-1. Create an empty Map: `const inventory = new Map();`  
-2. Add items: `inventory.set("apples", 500);` etc. (use 3 fruits).  
-3. Update one: `inventory.set("apples", 200);`  
-4. Log size and get one value.  
-5. Output: Console.log the total items and apple stock. Expected: "Total: 3, Apples: 200".  
-
-**Hints:** Chain sets for efficiency. Use `console.log(inventory.get("apples"))`.  
-**Self-Check Questions:** Does size include updates? (Yes.) What if key doesn't exist? (get returns undefined.)  
-**What-If Challenge:** Add a number key (1: "item1")—does it work? Why? (Yes, any type.)  
-
-**Pro Connection:** Like Excel lookups, but dynamic for real-time sales dashboards.
-
-**Complete Code Solution:**
+**Code Solution:**
 
 ```javascript
-// Step 1: Create an empty Map
-const inventory = new Map();
+const inventoryStock = new Map([
+  ["Cable", 250],
+  ["Screw", 1000],
+  ["Sensor", 85]
+]);
 
-// Step 2: Add items (chaining for efficiency)
-inventory.set("apples", 500)
-         .set("bananas", 300)
-         .set("oranges", 200);
+console.log("--- Step 1: Initial Inventory Setup ---");
+console.log("Inventory Map:", inventoryStock);
 
-// Step 3: Update one
-inventory.set("apples", 200);
-
-// Step 4 & 5: Log size and get one value, then output as specified
-const totalItems = inventory.size;
-const appleStock = inventory.get("apples");
-console.log(`Total: ${totalItems}, Apples: ${appleStock}`);
+// Self-Check Question Answer
+console.log(`Initial Size: ${inventoryStock.size}`);
+// Expected Output: Initial Size: 3
 ```
 
-**Instructor Explanation and Marking:**  
-Great job if you got close—this is a solid A (4/4) for correctness (runs without errors), clarity (readable with comments), creativity (chaining adds efficiency), and documentation (steps matched). Let's break it down like reviewing your code:
+**Explanation:**
 
-- **Line 1: `const inventory = new Map();`**  
-  Input: None (constructor call). Process: Creates a new Map object, which is iterable, has a size property, and allows any key types—unlike objects. Why? Starts empty for dynamic building, common in finance where inventory loads from a database. Output: Empty Map (size 0). Real-world: In a store app, this initializes before API data arrives. Pitfall: Using `new Object()` instead—loses Map benefits like order. Fix: Always use Map for key-value with order needs.
+  * `const inventoryStock = new Map(...)`: We use the `new Map()` constructor and initialize it immediately by passing an array containing the key-value pairs.
+  * `["Cable", 250]`: Each inner array represents one entry, where `"Cable"` is the **key** and `250` is the **value**.
+  * **Reinforcement:** This setup confirms that Maps can be easily created from existing data structures (like arrays of arrays) and that the `.size` property provides an instant count of the entries.
 
-- **Lines 4-6: Chaining `.set()` calls**  
-  Input: Key-value pairs (strings as keys, numbers as values). Process: Adds each pair; chaining works because `.set()` returns the Map. Insertion order preserved: apples first, then bananas, oranges. Why? Efficient one-liner; matters in data analysis for building datasets quickly. Output: Map with 3 entries. Expected: `inventory.get("bananas")` returns 300. Thinking question: What if you set a duplicate key here? (Overwrites, but order stays based on first insertion.)
+-----
 
-- **Line 9: Update with `.set("apples", 200)`**  
-  Input: Existing key "apples", new value 200. Process: Overwrites value since key exists (Maps check with ===). Why? Simulates stock changes, like restocking in e-commerce. Output: Updated Map (size still 3). Real-world: Robotics inventory updating part counts after assembly. Pitfall: Thinking size increases— no, it's unique keys. Self-check: Yes, size includes updates (still counts the key).
+### **Step 2: Shipment Arrival (Updating)**
 
-- **Lines 12-14: Logging size and get**  
-  Input: None for `.size`; key for `.get()`. Process: `.size` returns count (O(1) fast); `.get()` fetches value or undefined. Template literal for clean output. Why? Quick checks in dashboards. Output: "Total: 3, Apples: 200" in console. Pro tip: In IoT, log like this for sensor counts.
+**Instruction:** 120 more units of `"Cable"` arrive. Update the stock quantity.
 
-Reinforcing concepts: This exercise shows Maps' flexibility (any keys) and methods like set/get/size for basic CRUD (create/read/update/delete). In real jobs, like climate science, use this for mapping locations to readings. What-if: Adding number key `inventory.set(1, "special")` works because keys can be any datatype—no coercion. Improvement: Add error handling, e.g., `if (!inventory.has("apples")) console.error("Key missing");`.
-
-### Exercise 2: Visitor Tracker with WeakMap (Intermediate + Garbage Collection)
-
-**Original (Preserved):**  
-**Objective:** Use WeakMap to track visits without memory leaks.  
-**Scenario:** Web app (data analysis) logging user visits—objects as keys, auto-clean on logout.  
-**Step-by-Step Instructions:**  
-
-1. Create `const visits = new WeakMap();`  
-2. Define 2 user objects: `{name: "Alice"}`, `{name: "Bob"}`.  
-3. Write `track(user)`: Get count or 0, increment, set back. Log name + count.  
-4. Call track twice for Alice, once for Bob.  
-5. Set Bob = null; (Simulate logout—entry should be eligible for GC.)  
-6. Try has(Bob)—should error or false (but test get: undefined). Expected log: "Alice: 2, Bob: 1".  
-
-**Hints:** Use `|| 0` for default. No iteration—access directly.  
-**Self-Check Questions:** Why WeakMap over Map? (Auto-cleanup.) Can you loop visits? (No.)  
-**What-If Challenge:** Add primitive key— what error? (TypeError.) Experiment: Log after null—still there initially, but GC will clean.  
-
-**Pro Connection:** Analytics tools like Google Analytics use similar for session tracking without bloating server memory.
-
-**Complete Code Solution:**
+**Code Solution:**
 
 ```javascript
-// Step 1: Create WeakMap
-const visits = new WeakMap();
+// A. Get the current stock quantity for "Cable"
+let currentCableStock = inventoryStock.get("Cable"); // Gets 250
 
-// Step 2: Define user objects
-const alice = {name: "Alice"};
-const bob = {name: "Bob"};
+// B. Calculate the new stock quantity
+let newCableStock = currentCableStock + 120; // 250 + 120 = 370
 
-// Step 3: track function
-function track(user) {
-  let count = visits.get(user) || 0;
-  count++;
-  visits.set(user, count);
-  console.log(`${user.name}: ${count}`);
-}
+// C. Update the Map using set()
+inventoryStock.set("Cable", newCableStock);
 
-// Step 4: Call track
-track(alice);  // Alice: 1
-track(alice);  // Alice: 2
-track(bob);    // Bob: 1
+console.log("\n--- Step 2: Shipment Arrival ---");
+console.log(`Current Cable Stock: ${inventoryStock.get("Cable")}`);
+// Expected Output: Current Cable Stock: 370
 
-// Step 5: Simulate logout
-bob = null;
-
-// Step 6: Test after null (get returns undefined, has would too if bob weren't null'd)
-console.log(visits.get(bob));  // undefined (eligible for GC)
+// Self-Check Question Answer:
+// The method used to update is `Map.set()`.
 ```
 
-**Instructor Explanation and Marking:**  
-Excellent if you handled the weak references—this earns a 4/4 for correctness (GC simulation works), clarity (function is modular), creativity (logs integrated), and documentation (comments align steps). Minor note: In real browsers, GC isn't instant, so "still there initially" is accurate—good self-check!
+**Explanation:**
 
-- **Line 2: `const visits = new WeakMap();`**  
-  Input: None. Process: Creates WeakMap for object keys only, with weak references for GC. Why? Prevents leaks in web apps where users log out. Output: Empty WeakMap. Real-world: Finance apps cache session data without holding memory forever. Pitfall: Trying to use string keys—throws TypeError (what-if challenge).
+  * `inventoryStock.get("Cable")`: We first read the existing value (250).
+  * `inventoryStock.set("Cable", newCableStock)`: We use the **`.set()`** method. Since the key `"Cable"` already exists, `set()` **overwrites** the old value (`250`) with the new value (`370`).
+  * **Reinforcement:** This demonstrates that `.set()` is a powerful, dual-purpose method for both adding new entries and updating existing ones.
 
-- **Lines 5-6: User objects**  
-  Input: Literals. Process: Creates references for keys. Why? Objects as keys allow complex data linking, like user profiles in analytics. Output: Two objects. Thinking question: Why reuse the same object? (Reference equality for get/set.)
+-----
 
-- **Lines 9-13: track function**  
-  Input: User object. Process: `get(user)` fetches count or undefined (`|| 0` defaults); increment; `set` updates. Log for visibility. Why? Simulates visit counting with privacy (no iteration). Output: Updated count and log, e.g., "Alice: 1". Real-world: IoT tracking device visits without bloat. Pitfall: Forgetting `|| 0`—NaN errors on undefined +1. Fix: Always default.
+### **Step 3: Order Fulfillment (Deleting)**
 
-- **Lines 16-18: Calls**  
-  Input: Users. Process: Invokes track, building counts. Why? Demonstrates repeated access. Output: Logs as expected.
+**Instruction:** The item `"Screw"` is sold out and removed from the active inventory list.
 
-- **Line 21: `bob = null;`**  
-  Input: Null assignment. Process: Removes reference; entry eligible for GC (auto-removes pair). Why? Mimics logout in data analysis. Output: None immediate.
-
-- **Line 25: Test get**  
-  Input: Null'd bob. Process: Returns undefined (post-GC). Why? Shows weak nature. Output: undefined. Self-check: WeakMap for cleanup vs. Map (would persist).
-
-Reinforcing concepts: WeakMaps shine for temporary data (keys must be objects, no size/iteration for privacy). In robotics, track bot sessions—auto-clean inactive. Improvement: Add more users for scale testing.
-
-### Exercise 3: GroupBy for Data Categorization (Advanced + ES2024)
-
-**Original (Preserved):**  
-**Objective:** Group inventory by stock level using groupBy.  
-**Scenario:** Climate data analyst grouping weather stations by temperature (high/low) for reports.  
-**Step-by-Step Instructions:**  
-
-1. Array: `const stations = [{id:1, temp:25}, {id:2, temp:15}, {id:3, temp:30}];`  
-2. Callback: `function categorize({temp}) { return temp > 20 ? "high" : "low"; }`  
-3. `const grouped = Map.groupBy(stations, categorize);`  
-4. Log grouped.get("high")—expected: Array with id1, id3.  
-5. Iterate values to count totals.  
-
-**Hints:** groupBy returns Map—use .get(key). Polyfill if old browser: Skip or use reduce.  
-**Self-Check Questions:** Does it mutate original? (No.) Map vs Object.groupBy? (Map is iterable.)  
-**What-If Challenge:** Group by object key (station obj)—use regular Map first, then discuss WeakMap for temp groups.  
-
-**Pro Connection:** In robotics, group sensors by health; in finance, transactions by risk level for audits.
-
-**Complete Code Solution:**
+**Code Solution:**
 
 ```javascript
-// Step 1: Array of stations
-const stations = [
-  {id: 1, temp: 25},
-  {id: 2, temp: 15},
-  {id: 3, temp: 30}
-];
+// Remove the "Screw" entry
+let deleteScrewStatus = inventoryStock.delete("Screw");
 
-// Step 2: Callback function
-function categorize({temp}) {
-  return temp > 20 ? "high" : "low";
-}
+console.log("\n--- Step 3: Order Fulfillment ---");
+console.log(`Did 'Screw' deletion succeed? ${deleteScrewStatus}`);
+console.log("Current Map entries:", inventoryStock);
 
-// Step 3: Group by
-const grouped = Map.groupBy(stations, categorize);
-
-// Step 4: Log high group
-console.log(grouped.get("high"));  // [{id:1, temp:25}, {id:3, temp:30}]
-
-// Step 5: Iterate values to count totals (e.g., total stations in high)
-let highCount = 0;
-for (const station of (grouped.get("high") || [])) {
-  highCount++;
-}
-console.log(`High temp count: ${highCount}`);  // High temp count: 2
+// Self-Check Question Answer:
+let deleteNailStatus = inventoryStock.delete("Nail");
+console.log(`If you try to delete 'Nail' (non-existent), delete returns: ${deleteNailStatus}`);
+// Expected Output (for non-existent): false
 ```
 
-**Instructor Explanation and Marking:**  
-Strong work on ES2024 features—4/4 for correctness (groups accurately), clarity (destructuring in callback), creativity (iteration for count), and documentation. Note: Assumes modern browser; polyfill for older with reduce.
+**Explanation:**
 
-- **Lines 2-6: stations array**  
-  Input: Literals. Process: Builds data source. Why? Realistic climate data. Output: Array of objects.
+  * `inventoryStock.delete("Screw")`: This method finds the key `"Screw"`, removes the entire key-value pair, and returns `true` to confirm the deletion.
+  * The Map now only contains `"Cable"` and `"Sensor"`.
+  * **Self-Check:** Attempting to delete `"Nail"` fails silently (doesn't cause an error) and returns `false`, confirming that the key was not found and no deletion occurred.
 
-- **Lines 9-11: categorize**  
-  Input: Object (destructured temp). Process: Ternary checks >20. Why? Simple grouping logic. Output: String key ("high"/"low"). Pitfall: Non-string return—coerces, but strings best.
+-----
 
-- **Line 14: Map.groupBy**  
-  Input: Array, callback. Process: Calls callback per item, groups into Map (keys from returns, values as arrays). No mutation of original. Why? Efficient categorization. Output: Map like {"high": [...], "low": [...]}. Real-world: Finance grouping trades by profit.
+### **Step 4: Check Existence (Using `has()` and `get()` )**
 
-- **Line 17: Log get("high")**  
-  Input: Key. Process: Fetches array. Output: Expected objects.
+**Instruction:** Write a conditional statement that checks if `"Sensor"` is in stock. If it is, print its quantity. If not, print "Out of Stock."
 
-- **Lines 20-24: Iterate count**  
-  Input: Group array (|| [] for safety). Process: for...of loops items, increments. Why? Aggregates like report totals. Output: "High temp count: 2". Self-check: No mutation; Map iterable vs. Object.groupBy.
+**Code Solution:**
 
-Reinforcing concepts: groupBy for data pipelines—non-mutating, ordered. In robotics, group by status. What-if: For object keys, use regular Map.set in loop; WeakMap if temp-caching groups.
+```javascript
+const itemToCheck = "Sensor";
 
-## Section 3: Project Simulation
+console.log("\n--- Step 4: Check Existence ---");
+if (inventoryStock.has(itemToCheck)) {
+  const quantity = inventoryStock.get(itemToCheck);
+  console.log(`${itemToCheck} is in stock. Quantity: ${quantity}`);
+} else {
+  console.log(`${itemToCheck} is Out of Stock.`);
+}
+// Expected Output: Sensor is in stock. Quantity: 85
 
-(As per your request, skipping project solutions—focus on exercises. If ready, tackle the Sensor Tracker next!)
+// Self-Check Question Answer:
+if (inventoryStock.has("sensor")) { // Checking for lowercase "sensor"
+  console.log("The case-sensitive check for 'sensor' (lowercase) is TRUE");
+} else {
+  console.log("The case-sensitive check for 'sensor' (lowercase) is FALSE. Maps are case-sensitive.");
+}
+// Expected Output: The case-sensitive check for 'sensor' (lowercase) is FALSE.
+```
 
-## Final Part: Completion Checklist and Summary
+**Explanation:**
 
-**Checklist:**  
+  * `inventoryStock.has(itemToCheck)`: This method is used first. It checks for the *exact* key and returns a boolean.
+  * If `true`, we proceed to `inventoryStock.get(itemToCheck)` to safely retrieve the value.
+  * **Self-Check:** Maps are **case-sensitive**. Searching for `"sensor"` (lowercase) fails because the key in the Map is `"Sensor"` (uppercase 'S'). This is a crucial difference from some database systems and a common beginner pitfall.
 
-- [x] All main ideas are fully and clearly explained.  
-- [x] All exercises are completed or tested.  
-- [ ] One real-world project is built. (Skipped per request—next time!)  
-- [x] Common beginner errors are identified and corrected.  
-- [x] Reflection questions are discussed or answered.  
-- [x] A one-sentence summary (main takeaway) is provided.  
-- [x] Next step: Explore Sets (linked page) for unique collections, or build this project into a web app with HTML/JS.
+-----
 
-One-sentence summary: These exercise solutions demonstrate how Maps, WeakMaps, and groupBy provide flexible, memory-safe data handling for real apps like inventory tracking and analytics, building your skills from basics to advanced categorization. Next: Try modifying these codes for your own scenarios, like a personal finance tracker! Questions? Share your variations. 🚀
+### **Step 5: Daily Count (Iterating over Entries with `forEach`)**
+
+**Instruction:** Use a loop to print every item name and its remaining quantity, one per line.
+
+**Code Solution:**
+
+```javascript
+console.log("\n--- Step 5: Daily Count Report (forEach) ---");
+inventoryStock.forEach((quantity, itemName) => {
+  // Reminder: forEach callback receives (value, key, map)
+  console.log(`Item: ${itemName} | Stock: ${quantity}`);
+});
+/* Expected Output:
+Item: Cable | Stock: 370
+Item: Sensor | Stock: 85
+*/
+
+// Self-Check Question Answer:
+// We should choose `Map.forEach()` or a `for...of` loop with `Map.entries()` because they both provide access to the **key** (item name) and the **value** (quantity) simultaneously.
+```
+
+**Explanation:**
+
+  * `inventoryStock.forEach(...)`: This is the cleanest way to iterate when you need both the key and the value for processing or display.
+  * The order of arguments in the callback function is fixed: **`(value, key, map)`**. It is important to remember that the **value** comes first.
+  * **Reinforcement:** The output order (`Cable`, then `Sensor`) confirms that Maps preserve the **original insertion order** (even after deletion).
+
+-----
+
+### **Step 6: System Maintenance (Iterating over Keys with `keys()`)**
+
+**Instruction:** All items must be marked for quarterly inspection. Use the `.keys()` method and a `for...of` loop to iterate through all remaining items and print: `[ItemName] is scheduled for inspection.`
+
+**Code Solution:**
+
+```javascript
+console.log("\n--- Step 6: System Maintenance Schedule (keys()) ---");
+for (const itemName of inventoryStock.keys()) {
+  console.log(`${itemName} is scheduled for inspection.`);
+}
+/* Expected Output:
+Cable is scheduled for inspection.
+Sensor is scheduled for inspection.
+*/
+
+// Self-Check Question Answer:
+console.log("\nSelf-Check: What if we used .values()?");
+for (const value of inventoryStock.values()) {
+  console.log(`Value found: ${value}`);
+}
+/* Expected Output (for values()):
+Value found: 370
+Value found: 85
+*/
+```
+
+**Explanation:**
+
+  * `inventoryStock.keys()`: This method returns an iterator containing only the keys (`"Cable"`, `"Sensor"`).
+  * `for (const itemName of ...)`: The `for...of` loop consumes the iterator, assigning each key to the `itemName` variable.
+  * **Self-Check:** If we used `inventoryStock.values()`, the loop would iterate over the quantities (`370`, `85`) instead of the names, making the output report meaningless for scheduling the *items*. This highlights the importance of choosing the right iterator for the task.
