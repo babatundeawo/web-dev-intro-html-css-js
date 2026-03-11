@@ -1,4 +1,4 @@
-\# JavaScript Tutorial — Introduction, Placement \& Output
+# JavaScript Tutorial — Introduction, Placement & Output
 
 
 
@@ -6,27 +6,23 @@
 
 
 
-\## 📌 What This Lesson Covers
+## 📌 What This Lesson Covers
 
 
 
 By the end of this lesson you will understand:
 
-\- What JavaScript is and why it exists
+- What JavaScript is and why it exists
 
-\- What JavaScript can do on a webpage
+- What JavaScript can do on a webpage
 
-\- Where to place JavaScript code (inside a page or in a separate file)
+- Where to place JavaScript code (inside a page or in a separate file)
 
-\- Four ways JavaScript can display or output information
-
-
-
-This lesson follows three phases: \*\*Understand → Practice → Build.\*\*
+- Four ways JavaScript can display or output information
 
 
 
----
+This lesson follows three phases: **Understand → Practice → Build.**
 
 
 
@@ -34,7 +30,11 @@ This lesson follows three phases: \*\*Understand → Practice → Build.\*\*
 
 
 
-\# PHASE 1 — CONCEPTUAL UNDERSTANDING
+---
+
+
+
+# PHASE 1 — CONCEPTUAL UNDERSTANDING
 
 
 
@@ -42,11 +42,11 @@ This lesson follows three phases: \*\*Understand → Practice → Build.\*\*
 
 
 
-\## 1.1 What Is JavaScript?
+## 1.1 What Is JavaScript?
 
 
 
-\### The Simple Explanation
+### The Simple Explanation
 
 
 
@@ -54,11 +54,11 @@ Imagine a webpage as a building.
 
 
 
-\- \*\*HTML\*\* is the structure — the walls, floors, and rooms.
+- **HTML** is the structure — the walls, floors, and rooms.
 
-\- \*\*CSS\*\* is the decoration — the paint, furniture, and lighting.
+- **CSS** is the decoration — the paint, furniture, and lighting.
 
-\- \*\*JavaScript\*\* is the electricity — it makes things \*move, respond, and come alive.\*
+- **JavaScript** is the electricity — it makes things *move, respond, and come alive.*
 
 
 
@@ -70,7 +70,7 @@ Without JavaScript, a webpage is a static printed page. With JavaScript, it beco
 
 
 
-\### Why Does JavaScript Exist?
+### Why Does JavaScript Exist?
 
 
 
@@ -78,7 +78,7 @@ In the early days of the internet (1990s), webpages could only display text and 
 
 
 
-\*\*JavaScript was created in 1995 by Brendan Eich at Netscape\*\* to solve this problem. It runs \*directly in the browser\*, so it can respond to user actions instantly — no server round-trip needed.
+**JavaScript was created in 1995 by Brendan Eich at Netscape** to solve this problem. It runs *directly in the browser*, so it can respond to user actions instantly — no server round-trip needed.
 
 
 
@@ -86,33 +86,23 @@ In the early days of the internet (1990s), webpages could only display text and 
 
 
 
-\### What Can JavaScript Do? (Real-World Examples)
-
-
+### What Can JavaScript Do? (Real-World Examples)
 
 | Action | Real-World Example |
-
 |---|---|
-
 | Change page content | Clicking "Show More" reveals hidden text |
-
 | React to user input | A form warns you if you left a field empty |
-
 | Animate elements | A menu slides open when you click a hamburger icon |
-
 | Communicate with servers | Google search shows suggestions as you type |
-
 | Store data locally | A shopping cart remembers your items |
-
 | Control multimedia | A play button starts a video |
 
 
-
 ---
 
 
 
-\### Micro-Demo 1 — JavaScript Changes Content Instantly
+### Micro-Demo 1 — JavaScript Changes Content Instantly
 
 
 
@@ -126,11 +116,11 @@ In the early days of the internet (1990s), webpages could only display text and 
 
 <script>
 
-&nbsp; function changeText() {
+ function changeText() {
 
-&nbsp;   document.getElementById("greeting").innerHTML = "Hello, JavaScript learner!";
+   document.getElementById("greeting").innerHTML = "Hello, JavaScript learner!";
 
-&nbsp; }
+ }
 
 </script>
 
@@ -138,29 +128,13 @@ In the early days of the internet (1990s), webpages could only display text and 
 
 
 
-\*\*What happens:\*\* When you click the button, the paragraph text changes — no page reload.
+**What happens:** When you click the button, the paragraph text changes — no page reload.
 
-\*\*Expected output:\*\* The paragraph updates from \*"Hello, visitor!"\* to \*"Hello, JavaScript learner!"\*
-
-
-
-> 🤔 \*\*Thinking question:\*\* What do you think would happen if you clicked the button a second time?
+**Expected output:** The paragraph updates from *"Hello, visitor!"* to *"Hello, JavaScript learner!"*
 
 
 
----
-
-
-
-\## 1.2 JavaScript Is Everywhere
-
-
-
-JavaScript is the \*\*only programming language that runs natively in web browsers\*\*. Every major website — Google, YouTube, Facebook, Amazon — uses JavaScript.
-
-
-
-It also runs on servers (using \*\*Node.js\*\*), mobile apps (using \*\*React Native\*\*), and desktop apps (using \*\*Electron\*\*). Learning JavaScript opens doors to almost every area of software development.
+> 🤔 **Thinking question:** What do you think would happen if you clicked the button a second time?
 
 
 
@@ -168,15 +142,31 @@ It also runs on servers (using \*\*Node.js\*\*), mobile apps (using \*\*React Na
 
 
 
+## 1.2 JavaScript Is Everywhere
+
+
+
+JavaScript is the **only programming language that runs natively in web browsers**. Every major website — Google, YouTube, Facebook, Amazon — uses JavaScript.
+
+
+
+It also runs on servers (using **Node.js**), mobile apps (using **React Native**), and desktop apps (using **Electron**). Learning JavaScript opens doors to almost every area of software development.
+
+
+
 ---
 
 
 
-\## 2.1 Where Do You Put JavaScript? (JS Placement)
+---
 
 
 
-JavaScript code must be placed somewhere the browser can find and execute it. There are \*\*three main places\*\* you can put JavaScript.
+## 2.1 Where Do You Put JavaScript? (JS Placement)
+
+
+
+JavaScript code must be placed somewhere the browser can find and execute it. There are **three main places** you can put JavaScript.
 
 
 
@@ -184,7 +174,7 @@ JavaScript code must be placed somewhere the browser can find and execute it. Th
 
 
 
-\### Place 1 — Inside the `<head>` Tag
+### Place 1 — Inside the `<head>` Tag
 
 
 
@@ -194,25 +184,25 @@ JavaScript code must be placed somewhere the browser can find and execute it. Th
 
 <html>
 
-&nbsp; <head>
+ <head>
 
-&nbsp;   <script>
+   <script>
 
-&nbsp;     function sayHello() {
+     function sayHello() {
 
-&nbsp;       alert("Hello from the head!");
+       alert("Hello from the head!");
 
-&nbsp;     }
+     }
 
-&nbsp;   </script>
+   </script>
 
-&nbsp; </head>
+ </head>
 
-&nbsp; <body>
+ <body>
 
-&nbsp;   <button onclick="sayHello()">Say Hello</button>
+   <button onclick="sayHello()">Say Hello</button>
 
-&nbsp; </body>
+ </body>
 
 </html>
 
@@ -220,13 +210,13 @@ JavaScript code must be placed somewhere the browser can find and execute it. Th
 
 
 
-\*\*What this does:\*\* The script is loaded before the page content appears.
+**What this does:** The script is loaded before the page content appears.
 
-\*\*When to use it:\*\* For scripts that must be ready before the user sees anything — for example, setting up configuration values.
+**When to use it:** For scripts that must be ready before the user sees anything — for example, setting up configuration values.
 
 
 
-> ⚠️ \*\*Beginner Mistake:\*\* Placing large scripts in `<head>` can slow down how fast the page appears, because the browser reads and runs the script before showing the content. Use this sparingly.
+> ⚠️ **Beginner Mistake:** Placing large scripts in `<head>` can slow down how fast the page appears, because the browser reads and runs the script before showing the content. Use this sparingly.
 
 
 
@@ -234,7 +224,7 @@ JavaScript code must be placed somewhere the browser can find and execute it. Th
 
 
 
-\### Place 2 — Inside the `<body>` Tag (Recommended for Beginners)
+### Place 2 — Inside the `<body>` Tag (Recommended for Beginners)
 
 
 
@@ -244,21 +234,21 @@ JavaScript code must be placed somewhere the browser can find and execute it. Th
 
 <html>
 
-&nbsp; <body>
+ <body>
 
-&nbsp;   <h1>My Page</h1>
+   <h1>My Page</h1>
 
-&nbsp;   <p id="demo">Original text.</p>
+   <p id="demo">Original text.</p>
 
 
 
-&nbsp;   <script>
+   <script>
 
-&nbsp;     document.getElementById("demo").innerHTML = "Changed by JavaScript!";
+     document.getElementById("demo").innerHTML = "Changed by JavaScript!";
 
-&nbsp;   </script>
+   </script>
 
-&nbsp; </body>
+ </body>
 
 </html>
 
@@ -266,15 +256,15 @@ JavaScript code must be placed somewhere the browser can find and execute it. Th
 
 
 
-\*\*Expected output:\*\* The paragraph shows \*"Changed by JavaScript!"\* when the page loads.
+**Expected output:** The paragraph shows *"Changed by JavaScript!"* when the page loads.
 
 
 
-\*\*Why this works better:\*\* The HTML content loads and appears first, then JavaScript runs. The user sees the page faster.
+**Why this works better:** The HTML content loads and appears first, then JavaScript runs. The user sees the page faster.
 
 
 
-> 💡 \*\*Best practice:\*\* Place your `<script>` tag just \*\*before the closing `</body>` tag\*\*. This ensures all HTML elements exist before JavaScript tries to interact with them.
+> 💡 **Best practice:** Place your `<script>` tag just **before the closing `</body>` tag**. This ensures all HTML elements exist before JavaScript tries to interact with them.
 
 
 
@@ -282,21 +272,21 @@ JavaScript code must be placed somewhere the browser can find and execute it. Th
 
 
 
-\### Place 3 — In an External File (Professional Standard)
+### Place 3 — In an External File (Professional Standard)
 
 
 
-As projects grow, keeping JavaScript inside HTML becomes messy. Professional developers put JavaScript in a \*\*separate `.js` file\*\*.
+As projects grow, keeping JavaScript inside HTML becomes messy. Professional developers put JavaScript in a **separate `.js` file**.
 
 
 
-\*\*Step 1 — Create a file called `myScript.js`:\*\*
+**Step 1 — Create a file called `myScript.js`:**
 
 ```javascript
 
 function greetUser() {
 
-&nbsp; alert("Welcome to my website!");
+ alert("Welcome to my website!");
 
 }
 
@@ -304,7 +294,7 @@ function greetUser() {
 
 
 
-\*\*Step 2 — Link it in your HTML file:\*\*
+**Step 2 — Link it in your HTML file:**
 
 ```html
 
@@ -312,15 +302,15 @@ function greetUser() {
 
 <html>
 
-&nbsp; <body>
+ <body>
 
-&nbsp;   <button onclick="greetUser()">Greet Me</button>
+   <button onclick="greetUser()">Greet Me</button>
 
 
 
-&nbsp;   <script src="myScript.js"></script>
+   <script src="myScript.js"></script>
 
-&nbsp; </body>
+ </body>
 
 </html>
 
@@ -328,7 +318,7 @@ function greetUser() {
 
 
 
-\*\*Expected output:\*\* Clicking the button shows an alert saying \*"Welcome to my website!"\*
+**Expected output:** Clicking the button shows an alert saying *"Welcome to my website!"*
 
 
 
@@ -336,21 +326,16 @@ function greetUser() {
 
 
 
-\### Why Use External Files?
+### Why Use External Files?
 
 
 
 | Reason | Explanation |
-
 |---|---|
-
-| \*\*Cleaner code\*\* | HTML handles structure; JS handles behaviour — each in its own file |
-
-| \*\*Reusability\*\* | One `.js` file can be linked to 100 different HTML pages |
-
-| \*\*Caching\*\* | The browser saves the JS file after the first download — pages load faster |
-
-| \*\*Team work\*\* | Designers edit HTML; developers edit JS — no conflicts |
+| **Cleaner code** | HTML handles structure; JS handles behaviour — each in its own file |
+| **Reusability** | One `.js` file can be linked to 100 different HTML pages |
+| **Caching** | The browser saves the JS file after the first download — pages load faster |
+| **Team work** | Designers edit HTML; developers edit JS — no conflicts |
 
 
 
@@ -358,7 +343,7 @@ function greetUser() {
 
 
 
-\### You Can Link Multiple External Files
+### You Can Link Multiple External Files
 
 
 
@@ -378,7 +363,7 @@ Each file is loaded in order, top to bottom.
 
 
 
-> 🤔 \*\*Thinking question:\*\* If `animations.js` depends on a function defined in `utilities.js`, which file must come first?
+> 🤔 **Thinking question:** If `animations.js` depends on a function defined in `utilities.js`, which file must come first?
 
 
 
@@ -386,11 +371,11 @@ Each file is loaded in order, top to bottom.
 
 
 
-\### What the `src` Attribute Does
+### What the `src` Attribute Does
 
 
 
-`src` stands for \*\*source\*\*. It tells the browser where to find the JavaScript file.
+`src` stands for **source**. It tells the browser where to find the JavaScript file.
 
 
 
@@ -402,15 +387,15 @@ Each file is loaded in order, top to bottom.
 
 
 
-\- `src="myScript.js"` → file is in the same folder as the HTML file
+- `src="myScript.js"` → file is in the same folder as the HTML file
 
-\- `src="js/myScript.js"` → file is inside a folder called `js`
+- `src="js/myScript.js"` → file is inside a folder called `js`
 
-\- `src="https://example.com/myScript.js"` → file is loaded from the internet (e.g., a library like jQuery)
+- `src="https://example.com/myScript.js"` → file is loaded from the internet (e.g., a library like jQuery)
 
 
 
-> ⚠️ \*\*Beginner Mistake:\*\* When using `src`, do not put any code between the opening and closing `<script>` tags. The browser ignores it.
+> ⚠️ **Beginner Mistake:** When using `src`, do not put any code between the opening and closing `<script>` tags. The browser ignores it.
 
 
 
@@ -420,7 +405,7 @@ Each file is loaded in order, top to bottom.
 
 <script src="myScript.js">
 
-&nbsp; alert("This will never run!");
+ alert("This will never run!");
 
 </script>
 
@@ -442,7 +427,7 @@ Each file is loaded in order, top to bottom.
 
 
 
-\## 3.1 JavaScript Output — Four Ways to Display Information
+## 3.1 JavaScript Output — Four Ways to Display Information
 
 
 
@@ -454,15 +439,15 @@ JavaScript has four main ways to output or display data. Each one serves a diffe
 
 
 
-\### Method 1 — `innerHTML` (Change Content on the Page)
+### Method 1 — `innerHTML` (Change Content on the Page)
 
 
 
-This is the most common and most useful method. It lets JavaScript write or change content \*inside\* an HTML element.
+This is the most common and most useful method. It lets JavaScript write or change content *inside* an HTML element.
 
 
 
-\*\*How it works — step by step:\*\*
+**How it works — step by step:**
 
 
 
@@ -474,7 +459,7 @@ This is the most common and most useful method. It lets JavaScript write or chan
 
 <script>
 
-&nbsp; document.getElementById("result").innerHTML = "JavaScript changed me!";
+ document.getElementById("result").innerHTML = "JavaScript changed me!";
 
 </script>
 
@@ -487,20 +472,15 @@ Breaking it down line by line:
 
 
 | Code Part | What It Does |
-
 |---|---|
-
 | `document` | Refers to the entire HTML page |
-
 | `.getElementById("result")` | Finds the HTML element with `id="result"` |
-
 | `.innerHTML` | Refers to the content inside that element |
-
 | `= "JavaScript changed me!"` | Replaces the content with this new text |
 
 
 
-\*\*Expected output:\*\* The paragraph displays \*"JavaScript changed me!"\*
+**Expected output:** The paragraph displays *"JavaScript changed me!"*
 
 
 
@@ -508,7 +488,7 @@ Breaking it down line by line:
 
 
 
-\*\*Real-world use case:\*\* Displaying the result of a calculation on the page.
+**Real-world use case:** Displaying the result of a calculation on the page.
 
 
 
@@ -520,13 +500,13 @@ Breaking it down line by line:
 
 <script>
 
-&nbsp; let price = 50;
+ let price = 50;
 
-&nbsp; let tax = 5;
+ let tax = 5;
 
-&nbsp; let total = price + tax;
+ let total = price + tax;
 
-&nbsp; document.getElementById("answer").innerHTML = "Total: $" + total;
+ document.getElementById("answer").innerHTML = "Total: $" + total;
 
 </script>
 
@@ -534,7 +514,7 @@ Breaking it down line by line:
 
 
 
-\*\*Expected output:\*\* The paragraph shows \*"Total: $55"\*
+**Expected output:** The paragraph shows *"Total: $55"*
 
 
 
@@ -542,7 +522,7 @@ Breaking it down line by line:
 
 
 
-\### Method 2 — `document.write()` (Write Directly to the Page)
+### Method 2 — `document.write()` (Write Directly to the Page)
 
 
 
@@ -554,7 +534,7 @@ This method writes content directly into the HTML document as it is being built.
 
 <script>
 
-&nbsp; document.write("Hello, World!");
+ document.write("Hello, World!");
 
 </script>
 
@@ -562,7 +542,7 @@ This method writes content directly into the HTML document as it is being built.
 
 
 
-\*\*Expected output:\*\* The page displays \*Hello, World!\*
+**Expected output:** The page displays *Hello, World!*
 
 
 
@@ -570,11 +550,11 @@ This method writes content directly into the HTML document as it is being built.
 
 
 
-> ⚠️ \*\*Critical Warning — The Most Important Beginner Mistake with `document.write()`\*\*
+> ⚠️ **Critical Warning — The Most Important Beginner Mistake with `document.write()`**
 
 
 
-If you use `document.write()` \*after\* the page has finished loading (for example, inside a button click), it will \*\*delete the entire page\*\* and replace it with only what you wrote.
+If you use `document.write()` *after* the page has finished loading (for example, inside a button click), it will **delete the entire page** and replace it with only what you wrote.
 
 
 
@@ -588,11 +568,11 @@ If you use `document.write()` \*after\* the page has finished loading (for examp
 
 
 
-\*\*Expected output after clicking:\*\* The entire page — including the heading and button — disappears. Only \*"Oops!"\* remains.
+**Expected output after clicking:** The entire page — including the heading and button — disappears. Only *"Oops!"* remains.
 
 
 
-\*\*When to use it:\*\* Only for quick testing or learning. Never in real projects.
+**When to use it:** Only for quick testing or learning. Never in real projects.
 
 
 
@@ -600,7 +580,7 @@ If you use `document.write()` \*after\* the page has finished loading (for examp
 
 
 
-\### Method 3 — `window.alert()` (Pop-Up Alert Box)
+### Method 3 — `window.alert()` (Pop-Up Alert Box)
 
 
 
@@ -612,7 +592,7 @@ This shows a small pop-up box with a message. The user must click OK to dismiss 
 
 <script>
 
-&nbsp; window.alert("Welcome to this website!");
+ window.alert("Welcome to this website!");
 
 </script>
 
@@ -620,7 +600,7 @@ This shows a small pop-up box with a message. The user must click OK to dismiss 
 
 
 
-\*\*Expected output:\*\* A pop-up box appears with the message \*"Welcome to this website!"\* and an OK button.
+**Expected output:** A pop-up box appears with the message *"Welcome to this website!"* and an OK button.
 
 
 
@@ -632,7 +612,7 @@ You can also write it without the `window.` prefix — both are identical:
 
 <script>
 
-&nbsp; alert("Hello!");
+ alert("Hello!");
 
 </script>
 
@@ -644,7 +624,7 @@ You can also write it without the `window.` prefix — both are identical:
 
 
 
-\*\*Real-world use case:\*\* Warning a user about something important.
+**Real-world use case:** Warning a user about something important.
 
 
 
@@ -656,7 +636,7 @@ You can also write it without the `window.` prefix — both are identical:
 
 
 
-> ⚠️ \*\*Beginner Mistake:\*\* Overusing `alert()` is very annoying for users. In professional projects, messages are usually shown on the page using `innerHTML` instead.
+> ⚠️ **Beginner Mistake:** Overusing `alert()` is very annoying for users. In professional projects, messages are usually shown on the page using `innerHTML` instead.
 
 
 
@@ -664,11 +644,11 @@ You can also write it without the `window.` prefix — both are identical:
 
 
 
-\### Method 4 — `console.log()` (Output to the Developer Console)
+### Method 4 — `console.log()` (Output to the Developer Console)
 
 
 
-This is the developer's most important debugging tool. It outputs information to the browser's \*\*developer console\*\* — a hidden panel that only developers can see. Regular website visitors never see it.
+This is the developer's most important debugging tool. It outputs information to the browser's **developer console** — a hidden panel that only developers can see. Regular website visitors never see it.
 
 
 
@@ -684,7 +664,7 @@ console.log("Price:", 199.99);
 
 
 
-\*\*Expected output (in the browser console):\*\*
+**Expected output (in the browser console):**
 
 ```
 
@@ -702,11 +682,11 @@ Price: 199.99
 
 
 
-\*\*How to open the console:\*\*
+**How to open the console:**
 
-\- \*\*Windows/Linux:\*\* Press `F12` → click the \*\*Console\*\* tab
+- **Windows/Linux:** Press `F12` → click the **Console** tab
 
-\- \*\*Mac:\*\* Press `Cmd + Option + J`
+- **Mac:** Press `Cmd + Option + J`
 
 
 
@@ -714,7 +694,7 @@ Price: 199.99
 
 
 
-\*\*Real-world use case:\*\* Checking the value of a variable while debugging.
+**Real-world use case:** Checking the value of a variable while debugging.
 
 
 
@@ -734,7 +714,7 @@ console.log("User age:", userAge);
 
 
 
-\*\*Expected console output:\*\*
+**Expected console output:**
 
 ```
 
@@ -754,20 +734,15 @@ User age: 30
 
 
 
-\### Summary Table — Which Output Method to Use?
+### Summary Table — Which Output Method to Use?
 
 
 
 | Method | Where Output Appears | Best Used For |
-
 |---|---|---|
-
 | `innerHTML` | On the webpage | Displaying results to users |
-
 | `document.write()` | On the webpage | Quick testing only |
-
 | `window.alert()` | Pop-up box | One-time important warnings |
-
 | `console.log()` | Browser console | Debugging and development |
 
 
@@ -780,7 +755,7 @@ User age: 30
 
 
 
-\# PHASE 2 — APPLIED EXERCISES
+# PHASE 2 — APPLIED EXERCISES
 
 
 
@@ -788,15 +763,15 @@ User age: 30
 
 
 
-\## Exercise 1 — Warm-Up: Your First JavaScript Output
+## Exercise 1 — Warm-Up: Your First JavaScript Output
 
 
 
-\*\*Objective:\*\* Write JavaScript that displays a personalised message on the page.
+**Objective:** Write JavaScript that displays a personalised message on the page.
 
 
 
-\*\*Scenario:\*\* You are building a simple welcome page for a school portal. When the page loads, it should greet the student by name.
+**Scenario:** You are building a simple welcome page for a school portal. When the page loads, it should greet the student by name.
 
 
 
@@ -804,7 +779,7 @@ User age: 30
 
 
 
-\*\*Warm-Up Mini-Example First:\*\*
+**Warm-Up Mini-Example First:**
 
 
 
@@ -814,13 +789,13 @@ User age: 30
 
 <script>
 
-&nbsp; document.getElementById("msg").innerHTML = "Good morning!";
+ document.getElementById("msg").innerHTML = "Good morning!";
 
 </script>
 
 ```
 
-Expected output: \*Good morning!\*
+Expected output: *Good morning!*
 
 
 
@@ -828,11 +803,11 @@ Expected output: \*Good morning!\*
 
 
 
-\*\*Your Exercise:\*\*
+**Your Exercise:**
 
 
 
-\*\*Step 1\*\* — Create an HTML file with this structure:
+**Step 1** — Create an HTML file with this structure:
 
 ```html
 
@@ -840,23 +815,23 @@ Expected output: \*Good morning!\*
 
 <html>
 
-&nbsp; <body>
+ <body>
 
-&nbsp;   <h1>School Portal</h1>
+   <h1>School Portal</h1>
 
-&nbsp;   <p id="welcome"></p>
+   <p id="welcome"></p>
 
-&nbsp;   <p id="date-info"></p>
+   <p id="date-info"></p>
 
 
 
-&nbsp;   <script>
+   <script>
 
-&nbsp;     // Your code goes here
+     // Your code goes here
 
-&nbsp;   </script>
+   </script>
 
-&nbsp; </body>
+ </body>
 
 </html>
 
@@ -864,53 +839,37 @@ Expected output: \*Good morning!\*
 
 
 
-\*\*Step 2\*\* — Inside the `<script>` tag, use `innerHTML` to:
+**Step 2** — Inside the `<script>` tag, use `innerHTML` to:
 
-\- Display \*"Welcome back, \[your name]!"\* in the `welcome` paragraph
+- Display *"Welcome back, [your name]!"* in the `welcome` paragraph
 
-\- Display \*"Today is a great day to learn JavaScript."\* in the `date-info` paragraph
-
-
-
-\*\*Step 3\*\* — Also add a `console.log()` statement that prints your name to the console.
+- Display *"Today is a great day to learn JavaScript."* in the `date-info` paragraph
 
 
 
-\*\*Hints:\*\*
-
-\- Use `document.getElementById("welcome").innerHTML = ...`
-
-\- Replace `\[your name]` with your actual name as a string in quotes
+**Step 3** — Also add a `console.log()` statement that prints your name to the console.
 
 
 
-\*\*Self-Check Questions:\*\*
+**Hints:**
 
-1\. What does `id="welcome"` do in HTML?
+- Use `document.getElementById("welcome").innerHTML = ...`
 
-2\. Why did you place your `<script>` tag before `</body>`?
-
-3\. Can you see your `console.log()` output? Where did you look?
+- Replace `[your name]` with your actual name as a string in quotes
 
 
 
-\*\*Optional What-If Challenge:\*\* What happens if you misspell the `id` in your JavaScript — for example, writing `"welcom"` instead of `"welcome"`? Try it and observe the result.
+**Self-Check Questions:**
+
+1. What does `id="welcome"` do in HTML?
+
+2. Why did you place your `<script>` tag before `</body>`?
+
+3. Can you see your `console.log()` output? Where did you look?
 
 
 
----
-
-
-
-\## Exercise 2 — External Script File
-
-
-
-\*\*Objective:\*\* Separate JavaScript into its own `.js` file and link it to an HTML page.
-
-
-
-\*\*Scenario:\*\* You are a junior web developer at a company. Your team lead tells you: \*"Keep all JavaScript in separate files. It's easier to maintain."\*
+**Optional What-If Challenge:** What happens if you misspell the `id` in your JavaScript — for example, writing `"welcom"` instead of `"welcome"`? Try it and observe the result.
 
 
 
@@ -918,7 +877,23 @@ Expected output: \*Good morning!\*
 
 
 
-\*\*Warm-Up Mini-Example:\*\*
+## Exercise 2 — External Script File
+
+
+
+**Objective:** Separate JavaScript into its own `.js` file and link it to an HTML page.
+
+
+
+**Scenario:** You are a junior web developer at a company. Your team lead tells you: *"Keep all JavaScript in separate files. It's easier to maintain."*
+
+
+
+---
+
+
+
+**Warm-Up Mini-Example:**
 
 
 
@@ -938,7 +913,7 @@ alert("Script file loaded successfully!");
 
 ```
 
-Expected output: An alert box saying \*"Script file loaded successfully!"\*
+Expected output: An alert box saying *"Script file loaded successfully!"*
 
 
 
@@ -946,19 +921,19 @@ Expected output: An alert box saying \*"Script file loaded successfully!"\*
 
 
 
-\*\*Your Exercise:\*\*
+**Your Exercise:**
 
 
 
-\*\*Step 1\*\* — Create a file called `welcome.js` with one function:
+**Step 1** — Create a file called `welcome.js` with one function:
 
 ```javascript
 
 function showWelcome() {
 
-&nbsp; document.getElementById("msg").innerHTML = "Welcome! This message came from an external file.";
+ document.getElementById("msg").innerHTML = "Welcome! This message came from an external file.";
 
-&nbsp; console.log("showWelcome function was called.");
+ console.log("showWelcome function was called.");
 
 }
 
@@ -966,7 +941,7 @@ function showWelcome() {
 
 
 
-\*\*Step 2\*\* — Create `index.html`:
+**Step 2** — Create `index.html`:
 
 ```html
 
@@ -974,19 +949,19 @@ function showWelcome() {
 
 <html>
 
-&nbsp; <body>
+ <body>
 
-&nbsp;   <h2>External Script Demo</h2>
+   <h2>External Script Demo</h2>
 
-&nbsp;   <p id="msg">Waiting for JavaScript...</p>
+   <p id="msg">Waiting for JavaScript...</p>
 
-&nbsp;   <button onclick="showWelcome()">Load Message</button>
+   <button onclick="showWelcome()">Load Message</button>
 
 
 
-&nbsp;   <script src="welcome.js"></script>
+   <script src="welcome.js"></script>
 
-&nbsp; </body>
+ </body>
 
 </html>
 
@@ -994,45 +969,29 @@ function showWelcome() {
 
 
 
-\*\*Step 3\*\* — Open the page and click the button.
+**Step 3** — Open the page and click the button.
 
 
 
-\*\*Expected output:\*\*
+**Expected output:**
 
-\- Paragraph changes to: \*"Welcome! This message came from an external file."\*
+- Paragraph changes to: *"Welcome! This message came from an external file."*
 
-\- Console shows: \*"showWelcome function was called."\*
-
-
-
-\*\*Self-Check Questions:\*\*
-
-1\. What would happen if you moved `<script src="welcome.js"></script>` to the `<head>` tag instead?
-
-2\. Why is separating HTML and JavaScript into different files considered professional practice?
-
-3\. What does the `src` attribute tell the browser?
+- Console shows: *"showWelcome function was called."*
 
 
 
-\*\*Optional What-If Challenge:\*\* Try linking two `.js` files. Put a different message in each and display both on the page.
+**Self-Check Questions:**
+
+1. What would happen if you moved `<script src="welcome.js"></script>` to the `<head>` tag instead?
+
+2. Why is separating HTML and JavaScript into different files considered professional practice?
+
+3. What does the `src` attribute tell the browser?
 
 
 
----
-
-
-
-\## Exercise 3 — Comparing All Four Output Methods
-
-
-
-\*\*Objective:\*\* Use all four output methods in one page and understand the difference between each.
-
-
-
-\*\*Scenario:\*\* You are testing a small data dashboard. Before presenting it to your team, you want to display test data in multiple ways to understand how each method works.
+**Optional What-If Challenge:** Try linking two `.js` files. Put a different message in each and display both on the page.
 
 
 
@@ -1040,7 +999,23 @@ function showWelcome() {
 
 
 
-\*\*Step 1\*\* — Build this page:
+## Exercise 3 — Comparing All Four Output Methods
+
+
+
+**Objective:** Use all four output methods in one page and understand the difference between each.
+
+
+
+**Scenario:** You are testing a small data dashboard. Before presenting it to your team, you want to display test data in multiple ways to understand how each method works.
+
+
+
+---
+
+
+
+**Step 1** — Build this page:
 
 ```html
 
@@ -1048,45 +1023,45 @@ function showWelcome() {
 
 <html>
 
-&nbsp; <body>
+ <body>
 
-&nbsp;   <h2>Output Methods Test</h2>
+   <h2>Output Methods Test</h2>
 
-&nbsp;   <p id="display-area">Results will appear here.</p>
+   <p id="display-area">Results will appear here.</p>
 
-&nbsp;   <button onclick="runAllOutputs()">Run All Outputs</button>
-
-
-
-&nbsp;   <script>
-
-&nbsp;     function runAllOutputs() {
-
-&nbsp;       // Method 1: innerHTML
-
-&nbsp;       document.getElementById("display-area").innerHTML = "Method 1: innerHTML is working!";
+   <button onclick="runAllOutputs()">Run All Outputs</button>
 
 
 
-&nbsp;       // Method 2: console.log
+   <script>
 
-&nbsp;       console.log("Method 2: console.log is working!");
+     function runAllOutputs() {
 
+       // Method 1: innerHTML
 
-
-&nbsp;       // Method 3: alert
-
-&nbsp;       alert("Method 3: alert is working!");
+       document.getElementById("display-area").innerHTML = "Method 1: innerHTML is working!";
 
 
 
-&nbsp;       // Note: document.write is intentionally NOT used here — why?
+       // Method 2: console.log
 
-&nbsp;     }
+       console.log("Method 2: console.log is working!");
 
-&nbsp;   </script>
 
-&nbsp; </body>
+
+       // Method 3: alert
+
+       alert("Method 3: alert is working!");
+
+
+
+       // Note: document.write is intentionally NOT used here — why?
+
+     }
+
+   </script>
+
+ </body>
 
 </html>
 
@@ -1094,27 +1069,23 @@ function showWelcome() {
 
 
 
-\*\*Expected output:\*\*
+**Expected output:**
 
-\- Page text changes to: \*"Method 1: innerHTML is working!"\*
+- Page text changes to: *"Method 1: innerHTML is working!"*
 
-\- Console shows: \*"Method 2: console.log is working!"\*
+- Console shows: *"Method 2: console.log is working!"*
 
-\- Alert box appears with: \*"Method 3: alert is working!"\*
-
-
-
-\*\*Self-Check Questions:\*\*
-
-1\. Which output method would you use if you wanted to show a calculation result to your website's visitors?
-
-2\. Which method is invisible to the user but useful to you as a developer?
-
-3\. Why was `document.write()` not used inside the button click function?
+- Alert box appears with: *"Method 3: alert is working!"*
 
 
 
----
+**Self-Check Questions:**
+
+1. Which output method would you use if you wanted to show a calculation result to your website's visitors?
+
+2. Which method is invisible to the user but useful to you as a developer?
+
+3. Why was `document.write()` not used inside the button click function?
 
 
 
@@ -1122,7 +1093,11 @@ function showWelcome() {
 
 
 
-\# PHASE 3 — PROJECT SIMULATION
+---
+
+
+
+# PHASE 3 — PROJECT SIMULATION
 
 
 
@@ -1130,11 +1105,11 @@ function showWelcome() {
 
 
 
-\## Mini-Project: Personal Profile Card with JavaScript
+## Mini-Project: Personal Profile Card with JavaScript
 
 
 
-\*\*Project Overview:\*\* You will build a personal profile card webpage that uses JavaScript to display information dynamically. This simulates a real task a junior front-end developer might be given on their first week at a company.
+**Project Overview:** You will build a personal profile card webpage that uses JavaScript to display information dynamically. This simulates a real task a junior front-end developer might be given on their first week at a company.
 
 
 
@@ -1142,15 +1117,15 @@ function showWelcome() {
 
 
 
-\### Stage 1 — Setup \& Core Logic
+### Stage 1 — Setup & Core Logic
 
 
 
-\*\*Goal:\*\* Create the HTML structure and use JavaScript to populate it with data.
+**Goal:** Create the HTML structure and use JavaScript to populate it with data.
 
 
 
-\*\*Illustrative Preview First:\*\*
+**Illustrative Preview First:**
 
 ```html
 
@@ -1158,13 +1133,13 @@ function showWelcome() {
 
 <script>
 
-&nbsp; document.getElementById("job-title").innerHTML = "Junior Web Developer";
+ document.getElementById("job-title").innerHTML = "Junior Web Developer";
 
 </script>
 
 ```
 
-Expected output: \*Junior Web Developer\*
+Expected output: *Junior Web Developer*
 
 
 
@@ -1172,7 +1147,7 @@ Expected output: \*Junior Web Developer\*
 
 
 
-\*\*Your Stage 1 Task:\*\*
+**Your Stage 1 Task:**
 
 
 
@@ -1182,27 +1157,27 @@ Expected output: \*Junior Web Developer\*
 
 <html>
 
-&nbsp; <head>
+ <head>
 
-&nbsp;   <title>Profile Card</title>
+   <title>Profile Card</title>
 
-&nbsp; </head>
+ </head>
 
-&nbsp; <body>
+ <body>
 
-&nbsp;   <h1 id="full-name"></h1>
+   <h1 id="full-name"></h1>
 
-&nbsp;   <p id="job-role"></p>
+   <p id="job-role"></p>
 
-&nbsp;   <p id="location"></p>
+   <p id="location"></p>
 
-&nbsp;   <p id="bio"></p>
+   <p id="bio"></p>
 
 
 
-&nbsp;   <script src="profile.js"></script>
+   <script src="profile.js"></script>
 
-&nbsp; </body>
+ </body>
 
 </html>
 
@@ -1210,7 +1185,7 @@ Expected output: \*Junior Web Developer\*
 
 
 
-\*\*Create `profile.js`:\*\*
+**Create `profile.js`:**
 
 ```javascript
 
@@ -1246,7 +1221,7 @@ console.log("Profile loaded for:", name);
 
 
 
-\*\*Expected page output:\*\*
+**Expected page output:**
 
 ```
 
@@ -1260,7 +1235,7 @@ Passionate about building clean, user-friendly websites using HTML, CSS, and Jav
 
 ```
 
-\*\*Expected console output:\*\*
+**Expected console output:**
 
 ```
 
@@ -1274,15 +1249,15 @@ Profile loaded for: Jordan Smith
 
 
 
-\### Stage 2 — Adding Features
+### Stage 2 — Adding Features
 
 
 
-\*\*Goal:\*\* Add a button that shows a contact alert and a skills section.
+**Goal:** Add a button that shows a contact alert and a skills section.
 
 
 
-\*\*Add to your HTML (inside `<body>`, before the script tag):\*\*
+**Add to your HTML (inside `<body>`, before the script tag):**
 
 ```html
 
@@ -1296,7 +1271,7 @@ Profile loaded for: Jordan Smith
 
 
 
-\*\*Add to your `profile.js`:\*\*
+**Add to your `profile.js`:**
 
 ```javascript
 
@@ -1312,7 +1287,7 @@ document.getElementById("skills-list").innerHTML = skills;
 
 function showContact() {
 
-&nbsp; alert("You can reach " + name + " at jordan.smith@email.com");
+ alert("You can reach " + name + " at jordan.smith@email.com");
 
 }
 
@@ -1320,9 +1295,9 @@ function showContact() {
 
 
 
-\*\*Expected output when button is clicked:\*\*
+**Expected output when button is clicked:**
 
-Alert box: \*"You can reach Jordan Smith at jordan.smith@email.com"\*
+Alert box: *"You can reach Jordan Smith at jordan.smith@email.com"*
 
 
 
@@ -1330,15 +1305,15 @@ Alert box: \*"You can reach Jordan Smith at jordan.smith@email.com"\*
 
 
 
-\### Stage 3 — Displaying Results \& Reflection
+### Stage 3 — Displaying Results & Reflection
 
 
 
-\*\*Goal:\*\* Add a visitor counter simulation and finalise the project.
+**Goal:** Add a visitor counter simulation and finalise the project.
 
 
 
-\*\*Add to `profile.js`:\*\*
+**Add to `profile.js`:**
 
 ```javascript
 
@@ -1356,7 +1331,7 @@ console.log("Visitor count displayed:", visitorCount);
 
 
 
-\*\*Expected additional page output (appended to bio):\*\*
+**Expected additional page output (appended to bio):**
 
 ```
 
@@ -1370,31 +1345,17 @@ This profile has been viewed 1042 times.
 
 
 
-\*\*Reflection Questions:\*\*
+**Reflection Questions:**
 
 
 
-1\. In a real company, where would the visitor count actually come from? (Hint: think about databases and servers.)
+1. In a real company, where would the visitor count actually come from? (Hint: think about databases and servers.)
 
-2\. Why is it better to store the name in a variable (`let name = "Jordan Smith"`) rather than typing `"Jordan Smith"` everywhere?
+2. Why is it better to store the name in a variable (`let name = "Jordan Smith"`) rather than typing `"Jordan Smith"` everywhere?
 
-3\. How would you update this profile card to show a different person's information? What would you change?
+3. How would you update this profile card to show a different person's information? What would you change?
 
-4\. If this were a real product, which output method — `innerHTML`, `alert`, or `console.log` — would users interact with, and which one would only the developer see?
-
-
-
----
-
-
-
-\*\*Optional Advanced Features to Explore:\*\*
-
-\- Add a profile photo using JavaScript to set an `<img>` tag's `src` attribute
-
-\- Display today's date automatically using JavaScript's built-in `Date` object
-
-\- Add a second profile and a button to toggle between the two
+4. If this were a real product, which output method — `innerHTML`, `alert`, or `console.log` — would users interact with, and which one would only the developer see?
 
 
 
@@ -1402,34 +1363,38 @@ This profile has been viewed 1042 times.
 
 
 
+**Optional Advanced Features to Explore:**
+
+- Add a profile photo using JavaScript to set an `<img>` tag's `src` attribute
+
+- Display today's date automatically using JavaScript's built-in `Date` object
+
+- Add a second profile and a button to toggle between the two
+
+
+
 ---
 
 
 
-\# ✅ COMPLETION CHECKLIST
+---
+
+
+
+# ✅ COMPLETION CHECKLIST
 
 
 
 | Item | Status |
-
 |---|---|
-
 | JavaScript explained as the "electricity" of the web | ✅ |
-
 | Three placement locations explained with examples | ✅ |
-
 | External file setup and `src` attribute explained | ✅ |
-
 | All four output methods explained with examples and warnings | ✅ |
-
 | Common beginner mistakes highlighted and corrected | ✅ |
-
 | Three applied exercises with warm-ups, hints, and self-checks | ✅ |
-
 | Real-world project built across three stages | ✅ |
-
 | Reflection questions answered | ✅ |
-
 | Every concept includes at least one example with visible expected output | ✅ |
 
 
@@ -1438,5 +1403,5 @@ This profile has been viewed 1042 times.
 
 
 
-\*\*One-sentence summary:\*\* JavaScript is the language that makes webpages interactive, and you control where it runs, how it is organised, and how it communicates with users through four distinct output methods — each suited to a different purpose.
+**One-sentence summary:** JavaScript is the language that makes webpages interactive, and you control where it runs, how it is organised, and how it communicates with users through four distinct output methods — each suited to a different purpose.
 
